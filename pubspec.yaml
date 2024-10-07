@@ -1,0 +1,189 @@
+name: shoping
+description: "A new Flutter project."
+# The following line prevents the package from being accidentally published to
+# pub.dev using `flutter pub publish`. This is preferred for private packages.
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+# The following defines the version and build number for your application.
+# A version number is three numbers separated by dots, like 1.2.43
+# followed by an optional build number separated by a +.
+# Both the version and the builder number may be overridden in flutter
+# build by specifying --build-name and --build-number, respectively.
+# In Android, build-name is used as versionName while build-number used as versionCode.
+# Read more about Android versioning at https://developer.android.com/studio/publish/versioning
+# In iOS, build-name is used as CFBundleShortVersionString while build-number is used as CFBundleVersion.
+# Read more about iOS versioning at
+# https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
+# In Windows, build-name is used as the major, minor, and patch parts
+# of the product and file versions while build-number is used as the build suffix.
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.5.1
+
+# Dependencies specify other packages that your package needs in order to work.
+# To automatically upgrade your package dependencies to the latest versions
+# consider running `flutter pub upgrade --major-versions`. Alternatively,
+# dependencies can be manually updated by changing the version numbers below to
+# the latest version available on pub.dev. To see which dependencies have newer
+# versions available, run `flutter pub outdated`.
+dependencies:
+  flutter:
+    sdk: flutter
+
+
+  # The following adds the Cupertino Icons font to your application.
+  # Use with the CupertinoIcons class for iOS style icons.
+  cupertino_icons: ^1.0.8
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  # The "flutter_lints" package below contains a set of recommended lints to
+  # encourage good coding practices. The lint set provided by the package is
+  # activated in the `analysis_options.yaml` file located at the root of your
+  # package. See that file for information about deactivating specific lint
+  # rules and activating additional ones.
+  flutter_lints: ^4.0.0
+
+# For information on the generic Dart part of this file, see the
+# following page: https://dart.dev/tools/pub/pubspec
+
+# The following section is specific to Flutter packages.
+flutter:
+
+  # The following line ensures that the Material Icons font is
+  # included with your application, so that you can use the icons in
+  # the material Icons class.
+  uses-material-design: true
+
+  # To add assets to your application, add an assets section, like this:
+  assets:
+#   남성
+   - assets/images/남성/1.webp
+   - assets/images/남성/2.jpg
+   - assets/images/남성/3.jfif
+   - assets/images/남성/4.jfif
+   - assets/images/남성/5.jfif
+   - assets/images/남성/6.jpg
+   - assets/images/남성/7.jpg
+   - assets/images/남성/8.jfif
+   - assets/images/남성/9.jpg
+   - assets/images/남성/10.webp
+   - assets/images/남성/11.jpg
+   - assets/images/남성/12.jpg
+   - assets/images/남성/13.jfif
+   - assets/images/남성/14.jfif
+   - assets/images/남성/15.webp
+#     여성
+   - assets/images/여성/1.jfif
+   - assets/images/여성/2.jfif
+   - assets/images/여성/3.jpg
+   - assets/images/여성/4.jfif
+   - assets/images/여성/5.jpg
+   - assets/images/여성/6.jpg
+   - assets/images/여성/7.jpg
+   - assets/images/여성/8.jfif
+   - assets/images/여성/9.png
+   - assets/images/여성/10.jfif
+   - assets/images/여성/11.jpg
+   - assets/images/여성/12.jpg
+   - assets/images/여성/13.jpg
+   - assets/images/여성/14.jfif
+   - assets/images/여성/15.jpg
+   - assets/images/여성/16.jpg
+   - assets/images/여성/17.webp
+#   반려동물용품
+   - assets/images/반려동물용품/1.jpg
+   - assets/images/반려동물용품/2.webp
+   - assets/images/반려동물용품/3.jfif
+   - assets/images/반려동물용품/4.jpg
+   - assets/images/반려동물용품/5.jpg
+   - assets/images/반려동물용품/6.jpg
+   - assets/images/반려동물용품/7.jpg
+   - assets/images/반려동물용품/8.jpg
+   - assets/images/반려동물용품/9.jfif
+   - assets/images/반려동물용품/10.jpg
+   - assets/images/반려동물용품/11.png
+   - assets/images/반려동물용품/12.avif
+   - assets/images/반려동물용품/13.avif
+   - assets/images/반려동물용품/14.jpeg
+   - assets/images/반려동물용품/15.avif
+   - assets/images/반려동물용품/16.jpg
+   - assets/images/반려동물용품/17.jpg
+#    홈인테리어
+   - assets/images/홈인테리어/1.jpg
+   - assets/images/홈인테리어/2.jpg
+   - assets/images/홈인테리어/3.jpg
+   - assets/images/홈인테리어/4.png
+   - assets/images/홈인테리어/5.png
+   - assets/images/홈인테리어/6.png
+   - assets/images/홈인테리어/7.png
+   - assets/images/홈인테리어/8.png
+   - assets/images/홈인테리어/9.jpg
+   - assets/images/홈인테리어/10.jpg
+   - assets/images/홈인테리어/11.jpg
+   - assets/images/홈인테리어/12.jfif
+   - assets/images/홈인테리어/13.jpg
+   - assets/images/홈인테리어/14.jfif
+   - assets/images/홈인테리어/15.jpg
+#   화장품
+   - assets/images/화장품/1.jpg
+   - assets/images/화장품/2.jpg
+   - assets/images/화장품/3.jpg
+   - assets/images/화장품/4.jpg
+   - assets/images/화장품/5.jpg
+   - assets/images/화장품/6.jpg
+   - assets/images/화장품/7.png
+   - assets/images/화장품/8.webp
+   - assets/images/화장품/9.webp
+   - assets/images/화장품/10.jpg
+   - assets/images/화장품/11.jpg
+   - assets/images/화장품/12.jfif
+   - assets/images/화장품/13.jpg
+   - assets/images/화장품/14.jpg
+   - assets/images/화장품/15.png
+#   문구류
+   - assets/images/문구류/1.jpg
+   - assets/images/문구류/2.webp
+   - assets/images/문구류/3.jpg
+   - assets/images/문구류/4.jpg
+   - assets/images/문구류/5.jpg
+   - assets/images/문구류/6.jpg
+   - assets/images/문구류/7.jpg
+   - assets/images/문구류/8.png
+   - assets/images/문구류/9.jfif
+   - assets/images/문구류/10.jpg
+   - assets/images/문구류/11.jpg
+   - assets/images/문구류/12.jpg
+   - assets/images/문구류/13.jpg
+   - assets/images/문구류/14.jfif
+   - assets/images/문구류/15.avif
+   - assets/images/문구류/16.webp
+
+  # An image asset can refer to one or more resolution-specific "variants", see
+  # https://flutter.dev/to/resolution-aware-images
+
+  # For details regarding adding assets from package dependencies, see
+  # https://flutter.dev/to/asset-from-package
+
+  # To add custom fonts to your application, add a fonts section here,
+  # in this "flutter" section. Each entry in this list should have a
+  # "family" key with the font family name, and a "fonts" key with a
+  # list giving the asset and other descriptors for the font. For
+  # example:
+  # fonts:
+  #   - family: Schyler
+  #     fonts:
+  #       - asset: fonts/Schyler-Regular.ttf
+  #       - asset: fonts/Schyler-Italic.ttf
+  #         style: italic
+  #   - family: Trajan Pro
+  #     fonts:
+  #       - asset: fonts/TrajanPro.ttf
+  #       - asset: fonts/TrajanPro_Bold.ttf
+  #         weight: 700
+  #
+  # For details regarding fonts from package dependencies,
+  # see https://flutter.dev/to/font-from-package
