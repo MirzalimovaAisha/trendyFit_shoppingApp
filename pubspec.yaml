@@ -161,6 +161,8 @@ flutter:
    - assets/images/문구류/14.jfif
    - assets/images/문구류/15.avif
    - assets/images/문구류/16.webp
+#   user
+   - assets/images/user/1.jpg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images

@@ -2,7 +2,7 @@ class Item {
   final int id;
   final String photo;
   final String name;
-  final double price;
+  final int price;
   final int rating;
 
   Item({
@@ -122,6 +122,8 @@ List<Item> menItems = [
     rating: 3,
   ),
 ];
+
+
 
 // === 여성의류 ===
 List<Item> womenItems = [
