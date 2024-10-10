@@ -330,5 +330,15 @@ List<Item> stationery = [
   Item(id: 16, photo: 'assets/images/문구류/16.webp', name: '문구류16', price: 2800, rating: 4),
 ];
 
+List<Item> recommendationItems = [
+  Item(id: 12, photo: 'assets/images/화장품/12.jfif', name: '화장품12', price: 60000, rating: 5),
+  Item(id: 2,  photo: 'assets/images/남성/2.jpg', name: '남성옷2', price: 50000, rating: 5 ),
+  Item(id: 6, photo: 'assets/images/남성/6.jpg', name: '남성옷6', price: 45000, rating: 4),
+  Item(id: 4, photo: 'assets/images/여성/4.jfif', name: '여성옷4', price: 120000, rating: 4),
+  Item(id: 8, photo: 'assets/images/여성/8.jfif', name: '여성옷8', price: 69000, rating: 4,),
+  Item(id: 9, photo: 'assets/images/여성/9.png', name: '여성옷9', price: 89000, rating: 5 ),
+  Item(id: 14, photo: 'assets/images/반려동물용품/14.jpeg', name: '반려동물용품14', price: 23000, rating: 5),
+  Item(id: 15, photo: 'assets/images/반려동물용품/15.avif', name: '반려동물용품15', price: 32000, rating: 4),
+];
 
 

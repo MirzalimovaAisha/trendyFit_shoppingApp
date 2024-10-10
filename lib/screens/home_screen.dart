@@ -45,20 +45,53 @@ class HomeScreen extends StatelessWidget {
         ),
       ),
       drawer: const Drawer(),
-      body: ListView.builder(
-        itemCount: menItems.length,  // 아이템 수 설정
-        itemBuilder: (context, index) {
-          // 인덱스를 안전하게 사용
-          if (index < menItems.length) {
-            return ListTile(
-              title: Text(menItems[index].name),
-              subtitle: Text('${menItems[index].price}￦'),
-              leading: Image.asset(menItems[index].photo),
-            );
-          } else {
-            return const SizedBox(); // 인덱스가 범위를 초과한 경우 빈 공간 반환
-          }
-        },
+
+      body: SafeArea(
+        child: GridView.builder(
+            gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                crossAxisCount: 2,
+              crossAxisSpacing: 18,
+              mainAxisSpacing: 50,
+            ),
+            itemCount: menItems.length,
+            itemBuilder: (context, index) {
+              return Container(
+                // width: 151,
+                // height: 300,
+                decoration: const BoxDecoration(
+                  color: Colors.grey,
+                  boxShadow: [
+                    BoxShadow(
+                      color: Color(0x3F000000),
+                      blurRadius: 4,
+                      offset: Offset(0, 2),
+                    ),
+                  ],
+                ),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Image.asset(
+                      menItems[index].photo,
+                      height: 100,
+                      width: double.infinity,
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(7),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            menItems[index].name
+                          )
+                        ],
+                      ),
+                    )
+                  ],
+                ),
+              );
+            }
+        ),
       ),
     );
   }
