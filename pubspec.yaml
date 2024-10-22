@@ -39,6 +39,8 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  google_fonts: ^6.2.1
+  curved_navigation_bar: ^1.0.6
 
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is
@@ -60,22 +62,6 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-#   남성
-   - assets/images/남성/1.webp
-   - assets/images/남성/2.jpg
-   - assets/images/남성/3.jfif
-   - assets/images/남성/4.jfif
-   - assets/images/남성/5.jfif
-   - assets/images/남성/6.jpg
-   - assets/images/남성/7.jpg
-   - assets/images/남성/8.jfif
-   - assets/images/남성/9.jpg
-   - assets/images/남성/10.webp
-   - assets/images/남성/11.jpg
-   - assets/images/남성/12.jpg
-   - assets/images/남성/13.jfif
-   - assets/images/남성/14.jfif
-   - assets/images/남성/15.webp
 #     여성
    - assets/images/여성/1.jfif
    - assets/images/여성/2.jfif
@@ -94,75 +80,10 @@ flutter:
    - assets/images/여성/15.jpg
    - assets/images/여성/16.jpg
    - assets/images/여성/17.webp
-#   반려동물용품
-   - assets/images/반려동물용품/1.jpg
-   - assets/images/반려동물용품/2.webp
-   - assets/images/반려동물용품/3.jfif
-   - assets/images/반려동물용품/4.jpg
-   - assets/images/반려동물용품/5.jpg
-   - assets/images/반려동물용품/6.jpg
-   - assets/images/반려동물용품/7.jpg
-   - assets/images/반려동물용품/8.jpg
-   - assets/images/반려동물용품/9.jfif
-   - assets/images/반려동물용품/10.jpg
-   - assets/images/반려동물용품/11.png
-   - assets/images/반려동물용품/12.avif
-   - assets/images/반려동물용품/13.avif
-   - assets/images/반려동물용품/14.jpeg
-   - assets/images/반려동물용품/15.avif
-   - assets/images/반려동물용품/16.jpg
-   - assets/images/반려동물용품/17.jpg
-#    홈인테리어
-   - assets/images/홈인테리어/1.jpg
-   - assets/images/홈인테리어/2.jpg
-   - assets/images/홈인테리어/3.jpg
-   - assets/images/홈인테리어/4.png
-   - assets/images/홈인테리어/5.png
-   - assets/images/홈인테리어/6.png
-   - assets/images/홈인테리어/7.png
-   - assets/images/홈인테리어/8.png
-   - assets/images/홈인테리어/9.jpg
-   - assets/images/홈인테리어/10.jpg
-   - assets/images/홈인테리어/11.jpg
-   - assets/images/홈인테리어/12.jfif
-   - assets/images/홈인테리어/13.jpg
-   - assets/images/홈인테리어/14.jfif
-   - assets/images/홈인테리어/15.jpg
-#   화장품
-   - assets/images/화장품/1.jpg
-   - assets/images/화장품/2.jpg
-   - assets/images/화장품/3.jpg
-   - assets/images/화장품/4.jpg
-   - assets/images/화장품/5.jpg
-   - assets/images/화장품/6.jpg
-   - assets/images/화장품/7.png
-   - assets/images/화장품/8.webp
-   - assets/images/화장품/9.webp
-   - assets/images/화장품/10.jpg
-   - assets/images/화장품/11.jpg
-   - assets/images/화장품/12.jfif
-   - assets/images/화장품/13.jpg
-   - assets/images/화장품/14.jpg
-   - assets/images/화장품/15.png
-#   문구류
-   - assets/images/문구류/1.jpg
-   - assets/images/문구류/2.webp
-   - assets/images/문구류/3.jpg
-   - assets/images/문구류/4.jpg
-   - assets/images/문구류/5.jpg
-   - assets/images/문구류/6.jpg
-   - assets/images/문구류/7.jpg
-   - assets/images/문구류/8.png
-   - assets/images/문구류/9.jfif
-   - assets/images/문구류/10.jpg
-   - assets/images/문구류/11.jpg
-   - assets/images/문구류/12.jpg
-   - assets/images/문구류/13.jpg
-   - assets/images/문구류/14.jfif
-   - assets/images/문구류/15.avif
-   - assets/images/문구류/16.webp
 #   user
    - assets/images/user/1.jpg
+#   intro
+   - assets/images/intro_image.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images
