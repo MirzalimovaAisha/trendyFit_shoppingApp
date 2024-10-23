@@ -33,7 +33,7 @@ class IntroScreen extends StatelessWidget {
             child: Column(
               children: [
                 const Text('Welcome to', style: TextStyle(color: Colors.white, fontSize: 24),),
-                Text('Liv Fashion',
+                Text('Lev Fashion',
                   style: GoogleFonts.italiana(
                     textStyle: const TextStyle(
                       color: Colors.white,
