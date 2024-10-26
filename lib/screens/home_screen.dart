@@ -49,7 +49,7 @@ class HomeScreen extends StatelessWidget {
               padding: const EdgeInsets.all(0), // 기본 패딩을 없앰
               children: [
                 Container(
-                  padding: const EdgeInsets.fromLTRB(20, 20, 20, 10),
+                  padding: const EdgeInsets.fromLTRB(16, 15, 16, 10),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
@@ -125,7 +125,7 @@ class HomeScreen extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Padding(
-                        padding: const EdgeInsets.fromLTRB(20, 15, 20, 24),
+                        padding: const EdgeInsets.fromLTRB(16, 15, 16, 24),
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [

@@ -12,6 +12,6 @@ class Item {
 List<Item> user = [
   Item(
     name: '리바이',
-    photo: 'assets/images/user/1.jpg'
+    photo: 'assets/images/user/2.png'
   ),
 ];

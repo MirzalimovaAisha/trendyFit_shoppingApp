@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+  import 'package:flutter/material.dart';
 import 'package:shoping/mock_data/mock_recommended.dart';
 import 'package:shoping/screens/product_detail_page.dart';
 

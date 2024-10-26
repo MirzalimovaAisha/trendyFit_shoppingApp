@@ -37,7 +37,7 @@ class IntroScreen extends StatelessWidget {
                   style: GoogleFonts.italiana(
                     textStyle: const TextStyle(
                       color: Colors.white,
-                      fontSize: 63,
+                      fontSize: 53,
                     ),
                   ),)
               ],
@@ -45,7 +45,7 @@ class IntroScreen extends StatelessWidget {
           ),
           // 로그인 버튼이랑 회원가입 버튼
           Positioned(
-            bottom: 60,
+            bottom: 100,
             left: 20,
             right: 20,
             child: Column(

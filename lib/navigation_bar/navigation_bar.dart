@@ -3,7 +3,7 @@ import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:shoping/screens/home_screen.dart';
 import 'package:shoping/screens/menu_screen.dart';
 import 'package:shoping/screens/profile_screen.dart';
-import 'package:shoping/screens/save_screen.dart';
+import 'package:shoping/screens/bookmark_screen.dart';
 
 class BottomNavigationBarApp extends StatefulWidget {
   const BottomNavigationBarApp({super.key});
