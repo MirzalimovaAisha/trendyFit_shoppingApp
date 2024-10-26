@@ -5,6 +5,7 @@ import 'package:shoping/mock_data/mock_user.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import 'package:shoping/widgets/carousel_widget.dart';
+import 'package:shoping/widgets/product_cards.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -155,18 +156,21 @@ class HomeScreen extends StatelessWidget {
 
                       const SizedBox(height: 30,),
                       Padding(
-                        padding: EdgeInsets.only(right: 20, left: 20),
+                        padding: const EdgeInsets.only(right: 10, left: 10),
                         child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text('Recommended Clothes',
                           style: GoogleFonts.nanumPenScript(
                               fontSize: 28,
                               color: const Color(0xFF301709)
                            )),
+                            const SizedBox(height: 5,),
+                            const ProductCards(),
+                            const SizedBox(height: 200,)
                           ],
                         ),
                       ),
-                      const SizedBox(height: 100,),
                     ],
                   ),
                 ),

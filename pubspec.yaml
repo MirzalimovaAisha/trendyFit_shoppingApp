@@ -65,25 +65,32 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
 #   recommended
-   - assets/images/여성/1.jfif
-   - assets/images/여성/2.jpg
-   - assets/images/여성/3.jfif
-   - assets/images/여성/4.jpg
-   - assets/images/여성/5.jpg
-   - assets/images/여성/6.jpg
-   - assets/images/여성/7.jpg
-   - assets/images/여성/8.jfif
-   - assets/images/여성/9.png
-   - assets/images/여성/10.jfif
-   - assets/images/여성/11.jpg
-   - assets/images/여성/12.jpg
+   - assets/images/recommended/1.jfif
+   - assets/images/recommended/2.jpg
+   - assets/images/recommended/3.jfif
+   - assets/images/recommended/4.jpg
+   - assets/images/recommended/5.jpg
+   - assets/images/recommended/6.jpg
+   - assets/images/recommended/7.jpg
+   - assets/images/recommended/8.jfif
+   - assets/images/recommended/9.png
+   - assets/images/recommended/10.jfif
+   - assets/images/recommended/11.jpg
+   - assets/images/recommended/12.jpg
 
 #   popular
-   - assets/images/여성/popular/1.jfif
-   - assets/images/여성/popular/2.jpg
-   - assets/images/여성/popular/3.jpg
-   - assets/images/여성/popular/4.jfif
-   - assets/images/여성/popular/5.webp
+   - assets/images/popular/1.jfif
+   - assets/images/popular/2.jpg
+   - assets/images/popular/3.jpg
+   - assets/images/popular/4.jfif
+   - assets/images/popular/5.webp
+
+#   bookMarked
+   - assets/images/bookmarked/1.jpg
+   - assets/images/bookmarked/2.jfif
+   - assets/images/bookmarked/3.webp
+   - assets/images/bookmarked/4.gif
+   - assets/images/bookmarked/5.jpg
 
 #   user
    - assets/images/user/1.jpg
