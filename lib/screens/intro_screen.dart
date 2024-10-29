@@ -37,7 +37,7 @@ class IntroScreen extends StatelessWidget {
                   style: GoogleFonts.italiana(
                     textStyle: const TextStyle(
                       color: Colors.white,
-                      fontSize: 53,
+                      fontSize: 64,
                     ),
                   ),)
               ],
@@ -65,7 +65,7 @@ class IntroScreen extends StatelessWidget {
                         backgroundColor: Colors.white.withOpacity(0.15000000596046448),
                         foregroundColor: Colors.white
                       ),
-                      child: const Text('Login')
+                      child: const Text('Login', style: TextStyle(fontSize: 16),)
                   ),
                 ),
                 const SizedBox(height: 15,),
@@ -82,7 +82,7 @@ class IntroScreen extends StatelessWidget {
                           backgroundColor: Colors.white.withOpacity(0.15000000596046448),
                           foregroundColor: Colors.white
                       ),
-                      child: const Text('Sign up')
+                      child: const Text('Sign up', style: TextStyle(fontSize: 16),)
                   ),
                 ),
               ],

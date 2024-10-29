@@ -1,6 +1,7 @@
-  import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
 import 'package:shoping/mock_data/mock_recommended.dart';
-import 'package:shoping/screens/product_detail_page.dart';
+import 'package:shoping/screens/detail_page/product_detail_page.dart';
+import 'package:shoping/mock_data/item.dart';
 
 class ProductCards extends StatelessWidget {
   const ProductCards({super.key});
@@ -17,7 +18,7 @@ class ProductCards extends StatelessWidget {
           crossAxisCount: 2,
           crossAxisSpacing: 15,
           mainAxisSpacing: 15,
-          childAspectRatio: 0.57,
+          childAspectRatio: 0.73,
         ),
         itemCount: recommendedItems.length,
         itemBuilder: (_, index) {

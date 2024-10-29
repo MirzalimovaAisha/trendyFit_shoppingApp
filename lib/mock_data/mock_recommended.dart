@@ -1,16 +1,4 @@
-class Item {
-  final int id;
-  final String photo;
-  final String name;
-  final int price;
-
-  Item({
-    required this.id,
-    required this.photo,
-    required this.name,
-    required this.price
-  });
-}
+import 'package:shoping/mock_data/item.dart';
 
 List<Item> recommendedItems = [
   Item(id: 1, photo: 'assets/images/recommended/1.jfif', name: '여성옷1', price: 703000,),

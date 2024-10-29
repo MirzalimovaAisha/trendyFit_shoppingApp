@@ -41,11 +41,9 @@ class SaveScreen extends StatelessWidget {
       body: ListView(
         children: [
           Container(
-            padding: const EdgeInsets.symmetric(horizontal: 16),
-            child: Column(
-              children: [
-                BookmarkWidget()
-              ],
+            padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 5),
+            child: const Center(
+              child: BookmarkWidget()
             ),
           ),
         ],

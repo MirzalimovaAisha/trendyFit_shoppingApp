@@ -150,7 +150,7 @@ class HomeScreen extends StatelessWidget {
 
                       // ====== Carousel Widget ======
                       SizedBox(
-                        height: 310,
+                        // height: 330,
                         child: CarouselWidget(),
                       ),
 

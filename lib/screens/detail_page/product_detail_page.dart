@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:shoping/mock_data/mock_recommended.dart';
+// import 'package:shoping/mock_data/mock_recommended.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:shoping/mock_data/item.dart';
+import 'package:shoping/screens/detail_page/full_screen_image_page.dart';
 
 class ProductDetailPage extends StatelessWidget {
   final Item item;
@@ -27,13 +29,18 @@ class ProductDetailPage extends StatelessWidget {
             children: [
 
               // 상품 이미지
-              Center(
-                child: ClipRRect(
-                  child: Image.asset(
-                    item.photo,
-                    width: double.infinity,
-                    height: 290,
-                    fit: BoxFit.cover,
+              GestureDetector(
+                onTap: (){
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => FullScreenImagePage(imageUrl: item.photo)));
+                },
+                child: Center(
+                  child: ClipRRect(
+                    child: Image.asset(
+                      item.photo,
+                      width: double.infinity,
+                      height: 290,
+                      fit: BoxFit.cover,
+                    ),
                   ),
                 ),
               ),
