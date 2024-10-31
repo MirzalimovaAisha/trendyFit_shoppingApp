@@ -14,12 +14,7 @@ class ProductDetailPage extends StatelessWidget {
     return Scaffold(
       backgroundColor: const Color(0xFFF6F6F6),
       appBar: AppBar(
-        actions: [
-          Padding(
-              padding: const EdgeInsets.only(right: 10,),
-            child: IconButton(onPressed: (){}, icon: const Icon(Icons.bookmark_outline, color: Color(0xFF7C7C7C),))
-          )
-        ],
+        toolbarHeight: 45,
       ),
 
       body: ListView(
@@ -38,7 +33,7 @@ class ProductDetailPage extends StatelessWidget {
                     child: Image.asset(
                       item.photo,
                       width: double.infinity,
-                      height: 290,
+                      height: 320,
                       fit: BoxFit.cover,
                     ),
                   ),
@@ -189,7 +184,8 @@ class ProductDetailPage extends StatelessWidget {
       ),
 
       bottomNavigationBar: Container(
-        padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 4),
+        height: 50,
+        padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 5),
         decoration: const BoxDecoration(
           color: Colors.white,
           boxShadow: [
@@ -203,14 +199,31 @@ class ProductDetailPage extends StatelessWidget {
         ),
 
         // ====== 구매하기 버튼 ======
-        child: ElevatedButton(
-            onPressed: (){},
-            style: ElevatedButton.styleFrom(
-              backgroundColor: const Color(0xFF301709),
-              foregroundColor: Colors.white,
-              padding: const EdgeInsets.all(17)
+        child: Row(
+          children: [
+            IconButton(
+                onPressed: (){}, 
+                icon: Image.asset('assets/icons/heart_red.png', width: 25,)
             ),
-            child: const Text('구매하기')
+            const SizedBox(width: 10,),
+            Container(
+              height: 25,
+              color: const Color(0xFFECECEC),
+              width: 1,
+            ),
+            const SizedBox(width: 10,),
+            Expanded(
+              child: ElevatedButton(
+                  onPressed: (){},
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: const Color(0xFF301709),
+                    foregroundColor: Colors.white,
+                    padding: const EdgeInsets.all(17)
+                  ),
+                  child: const Text('구매하기')
+              ),
+            ),
+          ],
         ),
       ),
     );

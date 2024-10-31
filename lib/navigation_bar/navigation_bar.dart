@@ -4,6 +4,7 @@ import 'package:shoping/screens/home_screen.dart';
 import 'package:shoping/screens/menu_screen.dart';
 import 'package:shoping/screens/profile_screen.dart';
 import 'package:shoping/screens/bookmark_screen.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class BottomNavigationBarApp extends StatefulWidget {
   const BottomNavigationBarApp({super.key});
@@ -20,8 +21,7 @@ class _BottomNavigationBarAppState extends State<BottomNavigationBarApp> {
     const HomeScreen(),
     const MenuScreen(),
     const SaveScreen(),
-    const ProfileScreen()
-    // const
+    const ProfileScreen(),
   ];
 
   @override
@@ -39,12 +39,31 @@ class _BottomNavigationBarAppState extends State<BottomNavigationBarApp> {
         buttonBackgroundColor: const Color(0xFF301709),
         color: const Color(0xFF301709),
         animationDuration: const Duration(milliseconds: 400),
-        // key: _bottomNavigationKey,
-        items: const [
-          Icon(Icons.home_outlined, color: Colors.white,),
-          Icon(Icons.menu, color: Colors.white,),
-          Icon(Icons.bookmark_outline, color: Colors.white,),
-          Icon(Icons.person_outline_outlined, color: Colors.white,),
+        items: [
+          Container(
+            width: 30,
+            height: 30,
+            alignment: Alignment.center,
+            child: Image.asset('assets/icons/home.png', width: 20, height: 20, color: Colors.white),
+          ),
+          Container(
+            width: 30,
+            height: 30,
+            alignment: Alignment.center,
+            child: Image.asset('assets/icons/menu.png', width: 20, height: 20, color: Colors.white),
+          ),
+          Container(
+            width: 30,
+            height: 30,
+            alignment: Alignment.center,
+            child: Image.asset('assets/icons/heart.png', width: 20, height: 20, color: Colors.white),
+          ),
+          Container(
+            width: 30,
+            height: 30,
+            alignment: Alignment.center,
+            child: Image.asset('assets/icons/profile.png', width: 20, height: 20, color: Colors.white),
+          ),
         ],
         onTap: (index) {
           setState(() {
@@ -53,6 +72,7 @@ class _BottomNavigationBarAppState extends State<BottomNavigationBarApp> {
         },
         letIndexChange: (index) => true,
       ),
+
     );
   }
 }
