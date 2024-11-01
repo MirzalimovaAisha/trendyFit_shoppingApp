@@ -18,7 +18,7 @@ class ProductCards extends StatelessWidget {
           crossAxisCount: 2,
           crossAxisSpacing: 10,
           mainAxisSpacing: 10,
-          childAspectRatio: 0.6,
+          childAspectRatio: 0.64,
         ),
         itemCount: recommendedItems.length,
         itemBuilder: (_, index) {
@@ -34,15 +34,15 @@ class ProductCards extends StatelessWidget {
               decoration: BoxDecoration(
                 // borderRadius: BorderRadius.circular(10),
                 // color: const Color(0xFFF5F5F5),
-                color: Colors.white
-                // boxShadow: [
-                //   BoxShadow(
-                //     color: Colors.grey.withOpacity(0.5),
-                //     spreadRadius: 0,
-                //     blurRadius: 4,
-                //     offset: const Offset(0, 1),
-                //   ),
-                // ],
+                color: Colors.white,
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.grey.withOpacity(0.5),
+                    spreadRadius: 0,
+                    blurRadius: 1,
+                    offset: const Offset(0, 1),
+                  ),
+                ],
               ),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,

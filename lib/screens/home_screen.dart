@@ -2,6 +2,7 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:shoping/mock_data/mock_user.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:shoping/screens/cart_screen.dart';
 import 'package:shoping/screens/search_screen.dart';
 
 import 'package:shoping/widgets/carousel_widget.dart';
@@ -47,12 +48,19 @@ class HomeScreen extends StatelessWidget {
               children: [
                 IconButton(
                   onPressed: (){
-                    Navigator.push(context, MaterialPageRoute(builder: (context)=> const SearchScreen()));
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context)=> const SearchScreen()));
                   },
                   icon: Image.asset('assets/icons/search.png', width: 20, height: 20, ),
                 ),
                 IconButton(
-                  onPressed: (){},
+                  onPressed: (){
+                    Navigator.push(
+                        context, 
+                        MaterialPageRoute(builder: (context)=> const CartScreen())
+                    );
+                  },
                   icon: Image.asset('assets/icons/cart.png', width: 20, height: 20,),
                 ),
               ],
