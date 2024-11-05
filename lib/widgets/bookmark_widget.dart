@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:shoping/mock_data/mock_bookmark.dart';
 import 'package:shoping/screens/detail_page/product_detail_page.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:shoping/mock_data/item.dart';
 
 class BookmarkWidget extends StatelessWidget {
   const BookmarkWidget({super.key});

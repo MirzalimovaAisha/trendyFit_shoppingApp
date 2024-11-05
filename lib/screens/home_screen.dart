@@ -1,6 +1,5 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
-import 'package:shoping/mock_data/mock_user.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:shoping/screens/cart_screen.dart';
 import 'package:shoping/screens/search_screen.dart';
@@ -13,13 +12,11 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final userName = user[0].name;
-    final userPhoto = user[0].photo;
 
     return Scaffold(
-      backgroundColor: const Color(0xFFF4F4F4),
+      backgroundColor: const Color(0xFFF6F6F8),
       appBar: AppBar(
-        toolbarHeight: 50,
+        toolbarHeight: 60,
         centerTitle: true,
         title: Text('Lev Fashion', style: GoogleFonts.moul(color: const Color(0xFF301709)),),
         leading: Builder(

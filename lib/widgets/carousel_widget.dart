@@ -43,7 +43,7 @@ class _CarouselWidgetState extends State<CarouselWidget> {
         CarouselSlider.builder(
           itemCount: popularItem.length,
           options: CarouselOptions(
-            height: 420,
+            height: 500,
             autoPlay: true,
             autoPlayInterval: const Duration(seconds: 4),
             enlargeCenterPage: false,

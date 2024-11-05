@@ -4,7 +4,6 @@ import 'package:shoping/screens/home_screen.dart';
 import 'package:shoping/screens/menu_screen.dart';
 import 'package:shoping/screens/profile_screen.dart';
 import 'package:shoping/screens/bookmark_screen.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 
 class BottomNavigationBarApp extends StatefulWidget {
   const BottomNavigationBarApp({super.key});
@@ -36,8 +35,8 @@ class _BottomNavigationBarAppState extends State<BottomNavigationBarApp> {
       bottomNavigationBar: CurvedNavigationBar(
         height: 55,
         backgroundColor: Colors.transparent,
-        buttonBackgroundColor: const Color(0xFF301709),
-        color: const Color(0xFF301709),
+        buttonBackgroundColor: const Color(0xFF28182C),
+        color: const Color(0xFF28182C),
         animationDuration: const Duration(milliseconds: 400),
         items: [
           Container(

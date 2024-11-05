@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:shoping/mock_data/mock_search_items.dart';
 
 class SearchScreen extends StatelessWidget {
   const SearchScreen({super.key});
@@ -8,13 +9,7 @@ class SearchScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    //  const item {
-    //   final String  recommend;
-    //
-    //   item({
-    //     required this.recommend,
-    //   })
-    // }
+
     return Scaffold(
       backgroundColor: const Color(0xFFFBFBFB),
       // appBar: AppBar(),
@@ -76,9 +71,76 @@ class SearchScreen extends StatelessWidget {
           //   ========== 추천 검색어 ==============
             Text('추천 검색어', style: GoogleFonts.notoSansKr(fontWeight: FontWeight.w500, fontSize: 16),),
             const SizedBox(height: 6,),
-            // ListView.builder(
-            //     itemBuilder: itemBuilder
-            // ),
+            Row(
+              children: [
+                Expanded(
+                  child: SizedBox(
+                    height: 40,
+                    child: ListView.builder(
+                      scrollDirection: Axis.horizontal,
+                      itemCount: recommendedKeywordItems.length,
+                      itemBuilder: (context, index) {
+                        final item = recommendedKeywordItems[index];
+                        return Padding(
+                          padding: const EdgeInsets.only(right: 8),
+                          child: Container(
+                            padding: const EdgeInsets.symmetric(horizontal: 18),
+                            decoration: BoxDecoration(
+                              color: Colors.white,
+                              borderRadius: BorderRadius.circular(50),
+                              border: Border.all(width: 1, color: const Color(0xFFE4E4E4))
+                            ),
+                            child: Center(
+                              child: Text(
+                                item.search_items,
+                                style: const TextStyle(color: const Color(0xFF717171), fontSize: 15),
+                              ),
+                            ),
+                          ),
+                        );
+                      },
+                    ),
+                  ),
+                ),
+              ],
+            ),
+
+            const Divider(height: 40,),
+
+            // ============ 최근 검색어 ===============
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text('최근 검색어', style: GoogleFonts.notoSansKr(fontWeight: FontWeight.w500, fontSize: 16),),
+                Text('전체 삭제', style: GoogleFonts.notoSansKr(color: const Color(0xFF717171)),)
+              ],
+            ),
+            const SizedBox(height: 20,),
+
+            ListView.builder(
+              shrinkWrap: true,
+              physics: const NeverScrollableScrollPhysics(),
+              itemCount: searchHistoryItems.length,
+              itemBuilder: (context, index) {
+                final item = searchHistoryItems[index];
+                return Container(
+                  margin: const EdgeInsets.only(bottom: 13),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Row(
+                        children: [
+                          Image.asset('assets/icons/clock.png', width: 20,),
+                          const SizedBox(width: 13,),
+                          Text(item.search_items, style: const TextStyle(fontSize: 16, color: const Color(0xFF717171)),),
+                        ],
+                      ),
+                      Image.asset('assets/icons/delete.png', width: 20,)
+                    ],
+                  ),
+                );
+              }
+            )
           ],
         ),
       ),

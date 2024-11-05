@@ -34,8 +34,8 @@ List<Item> popularItem = [
   Item(
     photo: 'assets/images/popular/4.jfif',
     text1: '이번 주 베스트 아이템',
-    text2: 'Hot Trends',
-    text3: '많은 사랑을 받고 있는 인기 상품',
+    text2: 'New Arrivals',
+    text3: '트렌디한 아이템을 지금 만나보세요',
   ),
   Item(
     photo: 'assets/images/popular/5.webp',

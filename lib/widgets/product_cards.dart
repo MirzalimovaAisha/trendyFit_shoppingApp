@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:shoping/mock_data/mock_recommended.dart';
 import 'package:shoping/screens/detail_page/product_detail_page.dart';
-import 'package:shoping/mock_data/item.dart';
+import 'package:intl/intl.dart'; // intl 패키지 추가
 
 class ProductCards extends StatelessWidget {
   const ProductCards({super.key});
 
   @override
   Widget build(BuildContext context) {
-
+    final NumberFormat currencyFormat = NumberFormat('#,###'); // NumberFormat 인스턴스 생성
 
     return SingleChildScrollView(
       child: GridView.builder(
@@ -32,9 +32,7 @@ class ProductCards extends StatelessWidget {
             },
             child: Container(
               decoration: BoxDecoration(
-                // borderRadius: BorderRadius.circular(10),
-                // color: const Color(0xFFF5F5F5),
-                color: Colors.white,
+                color: const Color(0xFFF5F5F5),
                 boxShadow: [
                   BoxShadow(
                     color: Colors.grey.withOpacity(0.5),
@@ -71,7 +69,7 @@ class ProductCards extends StatelessWidget {
                         ),
                         const SizedBox(height: 5),
                         Text(
-                          '${item.price}원',
+                          '${currencyFormat.format(item.price)}원',
                           style: const TextStyle(
                             color: Color(0xFF301709),
                             fontWeight: FontWeight.w700,

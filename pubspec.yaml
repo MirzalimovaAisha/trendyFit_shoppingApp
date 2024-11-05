@@ -44,6 +44,7 @@ dev_dependencies:
   flutter_card_swiper: ^2.0.0
   carousel_slider: ^5.0.0
   flutter_svg: ^2.0.10+1
+  intl: ^0.19.0
 
   image_compare_slider: ^2.8.0
 
@@ -95,9 +96,17 @@ flutter:
    - assets/images/bookmarked/4.gif
    - assets/images/bookmarked/5.jpg
 
+#   cart
+   - assets/images/cart/1.jpg
+   - assets/images/cart/2.png
+   - assets/images/cart/3.jpg
+   - assets/images/cart/4.jpg
+   - assets/images/cart/5.jpg
+
 #   user
    - assets/images/user/1.jpg
    - assets/images/user/2.png
+
 #   intro
    - assets/images/intro_image.png
 
@@ -111,6 +120,8 @@ flutter:
    - assets/icons/menu.png
    - assets/icons/drawer_menu.png
    - assets/icons/search.png
+   - assets/icons/clock.png
+   - assets/icons/delete.png
 
 #     font image
    - assets/images/front.png
