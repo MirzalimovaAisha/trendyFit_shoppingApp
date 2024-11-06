@@ -32,7 +32,8 @@ class ProductCards extends StatelessWidget {
             },
             child: Container(
               decoration: BoxDecoration(
-                color: const Color(0xFFF5F5F5),
+                // color: const Color(0xFFF5F5F5),
+                color: const Color(0xFFF4F4F4),
                 boxShadow: [
                   BoxShadow(
                     color: Colors.grey.withOpacity(0.5),
@@ -45,8 +46,7 @@ class ProductCards extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Container(
-                    height: 180,
+                  Expanded(
                     child: ClipRRect(
                       child: Image.asset(
                         item.photo,
@@ -56,7 +56,7 @@ class ProductCards extends StatelessWidget {
                     ),
                   ),
                   Padding(
-                    padding: const EdgeInsets.all(8.0),
+                    padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 8),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [

@@ -201,9 +201,151 @@ class ProductDetailPage extends StatelessWidget {
               width: 1,
             ),
             const SizedBox(width: 10),
+
+
             Expanded(
               child: ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  showModalBottomSheet(
+                    context: context,
+                    backgroundColor: Colors.white,
+                    shape: const RoundedRectangleBorder(
+                      borderRadius: BorderRadius.vertical(top: Radius.circular(15)),
+                    ),
+                    builder: (BuildContext context) {
+                      return Container(
+                        padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 20),
+                        height: 270,
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            const Text.rich(
+                              TextSpan(
+                                children: [
+                                  TextSpan(
+                                    text: '결제',
+                                    style: TextStyle(
+                                      color: Color(0xFFFF349D),
+                                      fontSize: 16,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                  TextSpan(
+                                    text: ' 하면 ',
+                                    style: TextStyle(
+                                      fontSize: 16,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                  TextSpan(
+                                    text: '1%',
+                                    style: TextStyle(
+                                      color: Color(0xFFFF349B),
+                                      fontSize: 16,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                  TextSpan(
+                                    text: '포인트가 적립됩니다.',
+                                    style: TextStyle(
+                                      fontSize: 16,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+
+                            const SizedBox(height: 20,),
+
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                const Text(
+                                  '수량',
+                                  style: TextStyle(
+                                    fontSize: 16,
+                                  ),
+                                ),
+                                Row(
+                                  children: [
+                                    IconButton(
+                                        onPressed: (){},
+                                        icon: const Icon(Icons.remove, size: 20,),
+                                    ),
+                                    const SizedBox(width: 10,),
+                                    const Text('1', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),),
+                                    const SizedBox(width: 10,),
+                                    IconButton(
+                                      onPressed: (){},
+                                      icon: const Icon(Icons.add, size: 20,)
+                                    ),
+                                  ],
+                                )
+                              ],
+                            ),
+
+                            const SizedBox(height: 40,),
+
+                            Expanded(
+                              child: Column(
+                                children: [
+                                  const Divider(),
+                                  Row(
+                                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                    children: [
+                                      const Text('상품 금액', style: TextStyle(fontSize: 16, color: Color(0xFF929292)),),
+                                      Text('${currencyFormat.format(item.price)}원', style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold),),
+                                    ],
+                                  ),
+                                  const SizedBox(height: 20,),
+                                  
+                                  Row(
+                                    children: [
+
+                                      // '장바구니' 버튼
+                                      Expanded(
+                                        child: ElevatedButton(
+                                          onPressed: () {},
+                                          style: ElevatedButton.styleFrom(
+                                            backgroundColor: Colors.white,
+                                            foregroundColor: const Color(0xFF28182C),
+                                            padding: const EdgeInsets.symmetric(vertical: 18),
+                                            side: const BorderSide(
+                                              color:  Color(0xFF28182C)
+                                            )
+                                          ),
+                                          child: const Text('장바구니', style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),),
+                                        ),
+                                      ),
+
+                                      const SizedBox(width: 10),
+
+                                      Expanded(
+                                        child: ElevatedButton(
+                                          onPressed: () {},
+                                          style: ElevatedButton.styleFrom(
+                                              backgroundColor: const Color(0xFF28182C),
+                                              foregroundColor: Colors.white,
+                                              padding: const EdgeInsets.symmetric(vertical: 18),
+                                              side: const BorderSide(
+                                                  color: Color(0xFF28182C)
+                                              )
+                                          ),
+                                          child: const Text('결제', style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ],
+                              ),
+                            )
+                          ],
+                        ),
+                      );
+                    },
+                  );
+                },
                 style: ElevatedButton.styleFrom(
                   backgroundColor: const Color(0xFF28182C),
                   foregroundColor: Colors.white,
@@ -211,6 +353,7 @@ class ProductDetailPage extends StatelessWidget {
                 ),
                 child: const Text('구매하기'),
               ),
+
             ),
           ],
         ),

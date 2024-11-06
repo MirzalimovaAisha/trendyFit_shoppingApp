@@ -2,12 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:shoping/mock_data/mock_bookmark.dart';
 import 'package:shoping/screens/detail_page/product_detail_page.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:intl/intl.dart';
 
 class BookmarkWidget extends StatelessWidget {
   const BookmarkWidget({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final NumberFormat currencyFormat = NumberFormat('#,###');
+
     return SingleChildScrollView(
       child: Column(
         children: [
@@ -72,7 +75,7 @@ class BookmarkWidget extends StatelessWidget {
                               ),
                               const SizedBox(height: 10),
                               Text(
-                                '${item.price}원',
+                                '${currencyFormat.format(item.price)}원',
                                 style: GoogleFonts.notoSansKr(
                                   color: const Color(0xFF444444),
                                   fontSize: 15,

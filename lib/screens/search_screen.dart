@@ -92,7 +92,7 @@ class SearchScreen extends StatelessWidget {
                             ),
                             child: Center(
                               child: Text(
-                                item.search_items,
+                                item.searchItems,
                                 style: const TextStyle(color: const Color(0xFF717171), fontSize: 15),
                               ),
                             ),
@@ -132,7 +132,7 @@ class SearchScreen extends StatelessWidget {
                         children: [
                           Image.asset('assets/icons/clock.png', width: 20,),
                           const SizedBox(width: 13,),
-                          Text(item.search_items, style: const TextStyle(fontSize: 16, color: const Color(0xFF717171)),),
+                          Text(item.searchItems, style: const TextStyle(fontSize: 16, color: const Color(0xFF717171)),),
                         ],
                       ),
                       Image.asset('assets/icons/delete.png', width: 20,)

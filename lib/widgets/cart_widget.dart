@@ -67,26 +67,36 @@ class _CartWidgetState extends State<CartWidget> {
               ),
               const SizedBox(width: 10),
               Expanded(
-                child: Column(
+                child: Row(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Text(
-                      item.name,
-                      style: GoogleFonts.notoSansKr(
-                        color: const Color(0xFF444444),
-                        fontSize: 16,
-                      ),
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          item.name,
+                          style: GoogleFonts.notoSansKr(
+                            color: const Color(0xFF444444),
+                            fontSize: 16,
+                          ),
+                        ),
+                        const SizedBox(height: 25),
+                        const Text(
+                          '수량 1개', // 수량 표시
+                          style: TextStyle(color: Color(0xFF737373), fontSize: 13),
+                        ),
+                      ],
                     ),
                     const SizedBox(height: 30),
                     Text(
                       '${currencyFormat.format(item.price)}원', // 금액 포맷팅
-                      style: const TextStyle(fontWeight: FontWeight.w600, fontSize: 16),
+                      style: const TextStyle(fontWeight: FontWeight.w600, fontSize: 16, color: Color(0xFFC86262)),
                     ),
                   ],
                 ),
-              ),
-              const Text('sfsf')
+              )
+
             ],
           ),
         );

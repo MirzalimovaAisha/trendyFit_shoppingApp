@@ -1,8 +1,8 @@
 import 'package:shoping/mock_data/item.dart';
 
 List<Item> recommendedItems = [
-  Item(id: 1, photo: 'assets/images/recommended/1.jfif', name: '여성옷1', price: 703000,),
-  Item(id: 2, photo: 'assets/images/recommended/2.jpg', name: '여성옷2', price: 34000,),
+  Item(id: 1, photo: 'assets/images/recommended/1.jfif', name: '갈색 원피스', price: 25000,),
+  Item(id: 2, photo: 'assets/images/recommended/2.jpg', name: '보라색 니트', price: 34000,),
   Item(id: 3, photo: 'assets/images/recommended/3.jfif', name: '여성옷3', price: 73000,),
   Item(id: 4, photo: 'assets/images/recommended/4.jpg', name: '여성옷4', price: 64000,),
   Item(id: 5, photo: 'assets/images/recommended/5.jpg', name: '여성옷5', price: 43000,),
@@ -13,4 +13,19 @@ List<Item> recommendedItems = [
   Item(id: 10, photo: 'assets/images/recommended/10.jfif', name: '여성옷10',price: 36000,),
   Item(id: 11, photo: 'assets/images/recommended/11.jpg', name: '여성옷11', price: 31000,),
   Item(id: 12, photo: 'assets/images/recommended/12.jpg', name: '여성옷12', price: 53000,),
+
+  Item(id: 13, photo: 'assets/images/recommended/13.webp', name: '여성옷13', price: 53000,),
+  Item(id: 14, photo: 'assets/images/recommended/14.jpg', name: '여성옷14', price: 53000,),
+  Item(id: 15, photo: 'assets/images/recommended/15.jpg', name: '여성옷15', price: 53000,),
+  Item(id: 16, photo: 'assets/images/recommended/16.webp', name: '여성옷16', price: 53000,),
+  Item(id: 17, photo: 'assets/images/recommended/17.jfif', name: '여성옷17', price: 53000,),
+  Item(id: 18, photo: 'assets/images/recommended/18.jpg', name: '여성옷18', price: 53000,),
+  Item(id: 19, photo: 'assets/images/recommended/19.jpg', name: '여성옷19', price: 53000,),
+  Item(id: 20, photo: 'assets/images/recommended/20.jpg', name: '여성옷20', price: 53000,),
+  Item(id: 21, photo: 'assets/images/recommended/21.jpg', name: '여성옷21', price: 53000,),
+  Item(id: 22, photo: 'assets/images/recommended/22.jfif', name: '여성옷22', price: 53000,),
+  Item(id: 23, photo: 'assets/images/recommended/23.jpg', name: '여성옷23', price: 53000,),
+  Item(id: 24, photo: 'assets/images/recommended/24.jpg', name: '여성옷24', price: 53000,),
+  Item(id: 25, photo: 'assets/images/recommended/25.jpg', name: '여성옷25', price: 53000,),
+  Item(id: 26, photo: 'assets/images/recommended/26.jpg', name: '여성옷26', price: 53000,),
 ];
