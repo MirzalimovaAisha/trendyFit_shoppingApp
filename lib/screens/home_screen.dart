@@ -1,10 +1,12 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:shoping/navigation_bar/navigation_bar.dart';
 import 'package:shoping/screens/cart_screen.dart';
 import 'package:shoping/screens/search_screen.dart';
 
 import 'package:shoping/widgets/carousel_widget.dart';
+import 'package:shoping/widgets/home_drawer.dart';
 import 'package:shoping/widgets/product_cards.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -67,7 +69,8 @@ class HomeScreen extends StatelessWidget {
         ],
       ),
 
-      drawer: Drawer(),
+      drawer: HomeDrawer(),
+      // drawerScrimColor: Colors.black.withOpacity(0.5),
 
       body: ListView(
         children: [

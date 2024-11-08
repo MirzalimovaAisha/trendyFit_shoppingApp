@@ -33,7 +33,7 @@ class _CartScreenState extends State<CartScreen> {
         backgroundColor: const Color(0xFFF4F4F4),
       ),
       body: Container(
-        padding: const EdgeInsets.only(left: 10, right: 10),
+        padding: const EdgeInsets.only(left: 16, right: 16),
         child: CartWidget(
           onTotalPriceChanged: (int totalPrice) {
             totalPriceNotifier.value = totalPrice;
