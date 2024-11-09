@@ -18,9 +18,8 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: const Color(0xFFF6F6F8),
       appBar: AppBar(
-        toolbarHeight: 60,
-        centerTitle: true,
-        title: Text('Lev Fashion', style: GoogleFonts.moul(color: const Color(0xFF301709)),),
+        toolbarHeight: 50,
+        title: Text('Lev Fashion', style: GoogleFonts.oleoScriptSwashCaps(color: const Color(0xFF301709)),),
         leading: Builder(
           builder: (context) {
             return GestureDetector(
@@ -39,7 +38,7 @@ class HomeScreen extends StatelessWidget {
             );
           }
         ),
-        
+
         actions: [
           Padding(
             padding: const EdgeInsets.all(8.0),
@@ -56,7 +55,7 @@ class HomeScreen extends StatelessWidget {
                 IconButton(
                   onPressed: (){
                     Navigator.push(
-                        context, 
+                        context,
                         MaterialPageRoute(builder: (context)=> const CartScreen())
                     );
                   },
@@ -69,8 +68,7 @@ class HomeScreen extends StatelessWidget {
         ],
       ),
 
-      drawer: HomeDrawer(),
-      // drawerScrimColor: Colors.black.withOpacity(0.5),
+      drawer: const HomeDrawer(),
 
       body: ListView(
         children: [

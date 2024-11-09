@@ -17,8 +17,8 @@ class ProductCards extends StatelessWidget {
         gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
           crossAxisCount: 2,
           crossAxisSpacing: 10,
-          mainAxisSpacing: 10,
-          childAspectRatio: 0.64,
+          mainAxisSpacing: 13,
+          childAspectRatio: 0.6,
         ),
         itemCount: recommendedItems.length,
         itemBuilder: (_, index) {
@@ -31,28 +31,37 @@ class ProductCards extends StatelessWidget {
               );
             },
             child: Container(
-              decoration: BoxDecoration(
-                // color: const Color(0xFFF5F5F5),
-                color: const Color(0xFFF4F4F4),
-                boxShadow: [
-                  BoxShadow(
-                    color: Colors.grey.withOpacity(0.5),
-                    spreadRadius: 0,
-                    blurRadius: 1,
-                    offset: const Offset(0, 1),
-                  ),
-                ],
-              ),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Expanded(
-                    child: ClipRRect(
-                      child: Image.asset(
-                        item.photo,
-                        fit: BoxFit.cover,
-                        width: double.infinity,
-                      ),
+                    child: Stack(
+                      children: [
+                        ClipRRect(
+                          borderRadius: BorderRadius.circular(12),
+                          child: Image.asset(
+                            item.photo,
+                            fit: BoxFit.cover,
+                            width: double.infinity,
+                            height: double.infinity,
+                          ),
+                        ),
+                        Positioned(
+                          right: 3,
+                          top: 3,
+                          child: Container(
+                            decoration: BoxDecoration(
+                              color: Colors.black.withOpacity(0.35),
+                              borderRadius: BorderRadius.circular(25)
+                            ),
+                            child: IconButton(
+                              color: Colors.black,
+                                onPressed: (){},
+                                icon: Image.asset('assets/icons/heart.png', width: 25,)
+                            ),
+                          ),
+                        )
+                      ],
                     ),
                   ),
                   Padding(
@@ -63,16 +72,15 @@ class ProductCards extends StatelessWidget {
                         Text(
                           item.name,
                           style: const TextStyle(
-                            fontSize: 15,
-                            color: Color(0xFF686868),
+                            fontSize: 16,
+                            fontWeight: FontWeight.bold
                           ),
                         ),
                         const SizedBox(height: 5),
                         Text(
                           '${currencyFormat.format(item.price)}원',
                           style: const TextStyle(
-                            color: Color(0xFF301709),
-                            fontWeight: FontWeight.w700,
+                            color: Color(0xFF898989),
                             fontSize: 15,
                           ),
                         ),

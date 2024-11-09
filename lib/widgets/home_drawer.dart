@@ -27,23 +27,12 @@ class HomeDrawer extends StatelessWidget {
               accountName: Text(item.name), 
               accountEmail: Text(item.email, style: const TextStyle(color: Color(0xFFBFBFBF)),)
           ),
-          // ListTile(
-          //   title: const Text('쿠폰'),
-          //   trailing: const Text(
-          //       '310p',
-          //     style: TextStyle(
-          //       color: Color(0xFFE96E6E),
-          //       fontSize: 15
-          //     ),
-          //   ),
-          //   onTap: () {},
-          // ),
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 13, vertical: 10),
+          const Padding(
+            padding: EdgeInsets.symmetric(horizontal: 13, vertical: 10),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-              Text('쿠팡', style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),),
+              Text('쿠폰', style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),),
               Text('310p', style: TextStyle(fontSize: 15, color: Color(0xFFE96E6E)),),
               ],
             ),

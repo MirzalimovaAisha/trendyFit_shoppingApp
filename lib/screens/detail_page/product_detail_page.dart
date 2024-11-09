@@ -227,15 +227,15 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Text('무료 배송',
+                          Text('배송 정보',
                               style: GoogleFonts.notoSansKr(
                                   fontSize: 16,
                                   color: const Color(0xFF301709))),
-                          const SizedBox(height: 10),
+                          const SizedBox(height: 7),
                           Text('내일 도착 10/2',
                               style: GoogleFonts.notoSansKr(
                                   fontSize: 14,
-                                  color: const Color(0xFF6F6F6F))),
+                                  color: const Color(0xFF009A0A))),
                         ],
                       ),
                     ),
@@ -261,6 +261,9 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
             )
           ],
         ),
+
+
+
         // ====== 구매하기 버튼 ======
         child: Row(
           children: [
