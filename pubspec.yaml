@@ -110,15 +110,16 @@ flutter:
    - assets/images/bookmarked/4.gif
    - assets/images/bookmarked/5.jpg
 
-#   bookMarked
-   - assets/images/category/가디건.jpg
-   - assets/images/category/블라우스.jpg
-   - assets/images/category/셔츠.jpg
-   - assets/images/category/자켓.jpg
-   - assets/images/category/청바지.jpg
-   - assets/images/category/치마.jpg
-   - assets/images/category/코트.jpg
-   - assets/images/category/티셔츠.webp
+#   category
+#   - assets/images/category/
+   - assets/images/category/blouse.jpg
+   - assets/images/category/cardigan.jpg
+   - assets/images/category/coat.jpg
+   - assets/images/category/jacket.jpg
+   - assets/images/category/pants.jpg
+   - assets/images/category/shirt.jpg
+   - assets/images/category/skirt.jpg
+   - assets/images/category/tshirt.webp
 
 #   cart
    - assets/images/cart/1.jpg

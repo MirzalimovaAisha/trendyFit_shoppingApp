@@ -4,6 +4,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:shoping/navigation_bar/navigation_bar.dart';
 import 'package:shoping/screens/cart_screen.dart';
 import 'package:shoping/screens/search_screen.dart';
+import 'package:shoping/widgets/appbar_widget.dart';
 
 import 'package:shoping/widgets/carousel_widget.dart';
 import 'package:shoping/widgets/home_drawer.dart';
@@ -17,56 +18,7 @@ class HomeScreen extends StatelessWidget {
 
     return Scaffold(
       backgroundColor: const Color(0xFFF6F6F8),
-      appBar: AppBar(
-        toolbarHeight: 50,
-        title: Text('Lev Fashion', style: GoogleFonts.oleoScriptSwashCaps(color: const Color(0xFF301709)),),
-        leading: Builder(
-          builder: (context) {
-            return GestureDetector(
-              onTap: (){
-                Scaffold.of(context).openDrawer();
-              },
-              child: Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 15),
-                child: Image.asset(
-                  'assets/icons/drawer_menu.png',
-                  width: 15,
-                  height: 15,
-                  // fit: BoxFit.cover,
-                ),
-              ),
-            );
-          }
-        ),
-
-        actions: [
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Row(
-              children: [
-                IconButton(
-                  onPressed: (){
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context)=> const SearchScreen()));
-                  },
-                  icon: Image.asset('assets/icons/search.png', width: 20, height: 20, ),
-                ),
-                IconButton(
-                  onPressed: (){
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context)=> const CartScreen())
-                    );
-                  },
-                  icon: Image.asset('assets/icons/cart.png', width: 20, height: 20,),
-                ),
-              ],
-            ),
-          ),
-
-        ],
-      ),
+      appBar: AppbarWidget(),
 
       drawer: const HomeDrawer(),
 

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:shoping/screens/home_screen.dart';
-import 'package:shoping/screens/menu_screen.dart';
+import 'package:shoping/screens/category_screen.dart';
 import 'package:shoping/screens/profile_screen.dart';
 import 'package:shoping/screens/bookmark_screen.dart';
 
@@ -18,7 +18,7 @@ class _BottomNavigationBarAppState extends State<BottomNavigationBarApp> {
 
   final List<Widget> _pages = [
     const HomeScreen(),
-    const MenuScreen(),
+    CategoryScreen(),
     const SaveScreen(),
     const ProfileScreen(),
   ];
