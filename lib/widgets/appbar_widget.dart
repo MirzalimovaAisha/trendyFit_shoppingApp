@@ -1,11 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
+import "package:google_fonts/google_fonts.dart";
+import 'package:shoping/screens/cart_screen.dart';
+import 'package:shoping/screens/search_screen.dart';
 
 class AppbarWidget extends StatelessWidget implements PreferredSizeWidget {
+  const AppbarWidget({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
         color: Colors.white,
         boxShadow: [
           BoxShadow(
@@ -19,9 +23,9 @@ class AppbarWidget extends StatelessWidget implements PreferredSizeWidget {
       child: AppBar(
         backgroundColor: Colors.white,
         toolbarHeight: 50,
-        elevation: 0, // AppBar 자체의 elevation을 제거합니다.
+        elevation: 0,
         title: Text(
-          'Lev Fashion',
+          'TrendyFit',
           style: GoogleFonts.oleoScriptSwashCaps(color: const Color(0xFF301709)),
         ),
         leading: Builder(
@@ -48,13 +52,17 @@ class AppbarWidget extends StatelessWidget implements PreferredSizeWidget {
               children: [
                 IconButton(
                   onPressed: () {
-                    Navigator.pushNamed(context, '/search');
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => const SearchScreen()));
                   },
                   icon: Image.asset('assets/icons/search.png', width: 20, height: 20),
                 ),
                 IconButton(
                   onPressed: () {
-                    Navigator.pushNamed(context, '/cart');
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => const CartScreen()));
                   },
                   icon: Image.asset('assets/icons/cart.png', width: 20, height: 20),
                 ),
