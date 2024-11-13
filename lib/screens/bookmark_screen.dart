@@ -4,8 +4,8 @@ import 'package:shoping/widgets/appbar_widget.dart';
 import 'package:shoping/widgets/bookmark_widget.dart';
 import 'package:shoping/widgets/home_drawer.dart';
 
-class SaveScreen extends StatelessWidget {
-  const SaveScreen({super.key});
+class BookmarkScreen extends StatelessWidget {
+  const BookmarkScreen({super.key});
 
   @override
   Widget build(BuildContext context) {

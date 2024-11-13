@@ -95,13 +95,7 @@ class LoginScreen extends StatelessWidget {
                       height: 44,
                       child: ElevatedButton(
                           onPressed: () {
-                            Navigator.pushReplacement(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) =>
-                                    const BottomNavigationBarApp(), // 네비게이션 바가 있는 페이지로 이동
-                              ),
-                            );
+                            Navigator.restorablePushNamed(context, '/navigation_bar');
                           },
                           style: ElevatedButton.styleFrom(
                               shape: RoundedRectangleBorder(

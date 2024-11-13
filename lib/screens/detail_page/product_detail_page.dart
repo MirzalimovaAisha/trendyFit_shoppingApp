@@ -16,6 +16,7 @@ class ProductDetailPage extends StatefulWidget {
 class _ProductDetailPageState extends State<ProductDetailPage> {
   int quantity = 1; // 초기 수량 설정
   late int totalPrice; // 총 금액 변수 선언
+  bool isLiked = false;
 
   @override
   void initState() {
@@ -235,7 +236,9 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
                           Text('내일 도착 10/2',
                               style: GoogleFonts.notoSansKr(
                                   fontSize: 14,
-                                  color: const Color(0xFF009A0A))),
+                                  color: const Color(0xFF009A0A)
+                              ),
+                          ),
                         ],
                       ),
                     ),
@@ -262,15 +265,21 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
           ],
         ),
 
-
-
         // ====== 구매하기 버튼 ======
         child: Row(
           children: [
-            IconButton(
-              onPressed: () {},
-              icon: Image.asset('assets/icons/heart_red.png', width: 25),
+            GestureDetector(
+              onTap: (){
+                setState(() {
+                  isLiked = !isLiked;
+                });
+              },
+              child: Image.asset(
+                  isLiked ? 'assets/icons/heart_red.png' : 'assets/icons/full_heart.png',
+                  width: 25
+              ),
             ),
+
             const SizedBox(width: 10),
             Container(
               height: 25,
@@ -405,13 +414,16 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
                                             const Text('상품 금액',
                                                 style: TextStyle(
                                                     fontSize: 16,
-                                                    color: Color(0xFF929292))),
+                                                    color: Color(0xFF929292)
+                                                ),
+                                            ),
                                             Text(
                                                 '${currencyFormat.format(totalPrice)}원',
                                                 style: const TextStyle(
                                                     fontSize: 16,
                                                     fontWeight:
-                                                        FontWeight.bold)),
+                                                        FontWeight.bold)
+                                            ),
                                           ],
                                         ),
                                         const SizedBox(height: 20),
@@ -419,22 +431,30 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
                                           children: [
                                             Expanded(
                                               child: ElevatedButton(
-                                                onPressed: () {},
+                                                onPressed: () {
+                                                  ScaffoldMessenger.of(context).showSnackBar(
+                                                      const SnackBar(
+                                                          content: Text('장바구니에 추가되었습니다.'),
+                                                        // backgroundColor: const Color(0xFFE96E6E),
+                                                      )
+                                                  );
+                                                  Navigator.pop(context);
+                                                },
                                                 style: ElevatedButton.styleFrom(
                                                   backgroundColor: Colors.white,
-                                                  foregroundColor:
-                                                      const Color(0xFF28182C),
-                                                  padding: const EdgeInsets
-                                                      .symmetric(vertical: 18),
-                                                  side: const BorderSide(
-                                                    color: Color(0xFF28182C),
+                                                  foregroundColor: const Color(0xFF28182C),
+                                                  padding: const EdgeInsets.symmetric(vertical: 18),
+                                                  side: const BorderSide(color: Color(0xFF28182C),
                                                   ),
                                                 ),
-                                                child: const Text('장바구니',
-                                                    style: TextStyle(
-                                                        fontSize: 16,
-                                                        fontWeight:
-                                                            FontWeight.bold)),
+                                                child: const Text(
+                                                  '장바구니',
+                                                  style: TextStyle(
+                                                      fontSize: 16,
+                                                      fontWeight:
+                                                      FontWeight.bold
+                                                  ),
+                                                ),
                                               ),
                                             ),
                                             const SizedBox(width: 10),
@@ -451,11 +471,14 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
                                                     color: Color(0xFF28182C),
                                                   ),
                                                 ),
-                                                child: const Text('결제',
-                                                    style: TextStyle(
-                                                        fontSize: 16,
-                                                        fontWeight:
-                                                            FontWeight.bold)),
+                                                child: const Text(
+                                                  '결제',
+                                                  style: TextStyle(
+                                                      fontSize: 16,
+                                                      fontWeight:
+                                                      FontWeight.bold
+                                                  ),
+                                                ),
                                               ),
                                             ),
                                           ],

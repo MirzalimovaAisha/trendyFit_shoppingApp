@@ -1,3 +1,4 @@
+import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:shoping/mock_data/mock_category.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -17,7 +18,7 @@ class CategoryScreen extends StatelessWidget {
       body: ListView(
         children: [
           Container(
-            margin: const EdgeInsets.only(top: 10,),
+            margin: const EdgeInsets.only(top: 10),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -26,31 +27,40 @@ class CategoryScreen extends StatelessWidget {
                   child: Text(
                     'Category',
                     style: GoogleFonts.nanumPenScript(
-                      fontSize: 32
+                        fontSize: 32
                     ),
                   ),
                 ),
 
                 //======== category cards ===========
-                Container(
-                  child: GridView.builder(
-                    shrinkWrap: true,
-                    physics: const NeverScrollableScrollPhysics(),
-                    padding: const EdgeInsets.only(bottom: 40),
-                    gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                        crossAxisCount: 2,
-                        crossAxisSpacing: 1,
-                        mainAxisSpacing: 1
-                    ),
-                    itemCount: categoryItems.length,
-                    itemBuilder: (context, index){
-                      final item = categoryItems[index];
-                      return Stack(
+                GridView.builder(
+                  shrinkWrap: true,
+                  physics: const NeverScrollableScrollPhysics(),
+                  padding: const EdgeInsets.only(bottom: 40),
+                  gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount: 2,
+                    crossAxisSpacing: 1,
+                    mainAxisSpacing: 0,
+                  ),
+                  itemCount: categoryItems.length,
+                  itemBuilder: (context, index) {
+                    final item = categoryItems[index];
+                    return ClipRRect(
+                      borderRadius: BorderRadius.circular(0),
+                      child: Stack(
                         children: [
-                          Image.asset(item.photo,),
+                          Positioned.fill(
+                            child: ImageFiltered(
+                              imageFilter: ImageFilter.blur(sigmaX: 4, sigmaY: 4),
+                              child: Image.asset(
+                                item.photo,
+                                fit: BoxFit.cover,
+                              ),
+                            ),
+                          ),
                           Container(
                             decoration: BoxDecoration(
-                                color: Colors.black.withOpacity(0.5)
+                              color: Colors.black.withOpacity(0.5),
                             ),
                           ),
                           Center(
@@ -58,13 +68,12 @@ class CategoryScreen extends StatelessWidget {
                               item.name,
                               style: GoogleFonts.kranky(color: Colors.white, fontSize: 24),
                             ),
-                          )
+                          ),
                         ],
-                      );
-                    },
-                  ),
+                      ),
+                    );
+                  },
                 ),
-
               ],
             ),
           ),

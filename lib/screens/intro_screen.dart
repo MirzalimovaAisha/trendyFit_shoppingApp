@@ -55,7 +55,7 @@ class IntroScreen extends StatelessWidget {
                   height: 44,
                   child: ElevatedButton(
                       onPressed: (){
-                        Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const LoginScreen()));
+                        Navigator.restorablePushNamed(context, '/login');
                       },
                       style: ElevatedButton.styleFrom(
                         shape: RoundedRectangleBorder(
