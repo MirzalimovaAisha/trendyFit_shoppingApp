@@ -166,13 +166,13 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
                                     horizontal: 15, vertical: 4),
                                 decoration: BoxDecoration(
                                   border: Border.all(
-                                      width: 1, color: const Color(0xFFC0C0C0)),
+                                      width: 1.5, color: const Color(0xFFE96E6E)),
                                   borderRadius: BorderRadius.circular(7),
                                 ),
                                 child: const Text('80',
                                     style: TextStyle(
-                                        color: Color(0xFF737373),
-                                        fontSize: 12)),
+                                        color: Color(0xFFE96E6E),
+                                        fontSize: 15)),
                               ),
                               const SizedBox(width: 5),
                               Container(
@@ -186,7 +186,7 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
                                 child: const Text('84',
                                     style: TextStyle(
                                         color: Color(0xFF737373),
-                                        fontSize: 12)),
+                                        fontSize: 15)),
                               ),
                               const SizedBox(width: 5),
                               Container(
@@ -200,7 +200,7 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
                                 child: const Text('90',
                                     style: TextStyle(
                                         color: Color(0xFF737373),
-                                        fontSize: 12)),
+                                        fontSize: 15)),
                               ),
                               const SizedBox(width: 5),
                               Container(
@@ -214,7 +214,7 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
                                 child: const Text('95',
                                     style: TextStyle(
                                         color: Color(0xFF737373),
-                                        fontSize: 12)),
+                                        fontSize: 15)),
                               ),
                             ],
                           ),
@@ -289,7 +289,7 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
             const SizedBox(width: 10),
             Expanded(
               child: SizedBox(
-                height: 45,
+                height: 50,
                 child: ElevatedButton(
                   onPressed: () {
                     showModalBottomSheet(
@@ -306,7 +306,7 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
                             return Container(
                               padding: const EdgeInsets.symmetric(
                                   horizontal: 16, vertical: 20),
-                              height: 270,
+                              height: 300,
                               child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [

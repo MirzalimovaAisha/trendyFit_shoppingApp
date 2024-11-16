@@ -27,7 +27,7 @@ class IntroScreen extends StatelessWidget {
             ),
           ),
           Positioned(
-            top: 170,
+            top: 200,
             left: 0,
             right: 0,
             child: Column(
@@ -45,14 +45,14 @@ class IntroScreen extends StatelessWidget {
           ),
           // 로그인 버튼이랑 회원가입 버튼
           Positioned(
-            bottom: 100,
-            left: 20,
-            right: 20,
+            bottom: 50,
+            left: 16,
+            right: 16,
             child: Column(
               children: [
                 SizedBox(
                   width: double.infinity,
-                  height: 44,
+                  height: 50,
                   child: ElevatedButton(
                       onPressed: (){
                         Navigator.restorablePushNamed(context, '/login');
@@ -60,29 +60,29 @@ class IntroScreen extends StatelessWidget {
                       style: ElevatedButton.styleFrom(
                         shape: RoundedRectangleBorder(
                           side: const BorderSide(width: 1, color: Colors.white),
-                          borderRadius: BorderRadius.circular(8),
+                          borderRadius: BorderRadius.circular(50),
                         ),
                         backgroundColor: Colors.white.withOpacity(0.15000000596046448),
                         foregroundColor: Colors.white
                       ),
-                      child: const Text('Login', style: TextStyle(fontSize: 16),)
+                      child: const Text('Login', style: TextStyle(fontSize: 18),)
                   ),
                 ),
-                const SizedBox(height: 15,),
+                const SizedBox(height: 10,),
                 SizedBox(
                   width: double.infinity,
-                  height: 44,
+                  height: 50,
                   child: ElevatedButton(
                       onPressed: (){},
                       style: ElevatedButton.styleFrom(
                           shape: RoundedRectangleBorder(
                             side: const BorderSide(width: 1, color: Colors.white),
-                            borderRadius: BorderRadius.circular(8),
+                            borderRadius: BorderRadius.circular(50),
                           ),
                           backgroundColor: Colors.white.withOpacity(0.15000000596046448),
                           foregroundColor: Colors.white
                       ),
-                      child: const Text('Sign up', style: TextStyle(fontSize: 16),)
+                      child: const Text('Sign up', style: TextStyle(fontSize: 18),)
                   ),
                 ),
               ],

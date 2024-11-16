@@ -43,7 +43,7 @@ class _CarouselWidgetState extends State<CarouselWidget> {
         CarouselSlider.builder(
           itemCount: popularItem.length,
           options: CarouselOptions(
-            height: 500,
+            height: 200,
             autoPlay: true,
             autoPlayInterval: const Duration(seconds: 4),
             enlargeCenterPage: false,
@@ -73,20 +73,20 @@ class _CarouselWidgetState extends State<CarouselWidget> {
                 Positioned(
                   bottom: 0,
                   child: Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 40),
+                    padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 15),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
                           item.text2,
-                          style: GoogleFonts.moul(
+                          style: GoogleFonts.mynerve(
                             color: Colors.white,
-                            fontSize: 36,
+                            fontSize: 40,
                           ),
                           maxLines: 2,
                           overflow: TextOverflow.ellipsis,
                         ),
-                        const SizedBox(height: 6),
+                        // const SizedBox(height: 6),
                         Text(
                           item.text3,
                           style: GoogleFonts.notoSans(
